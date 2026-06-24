@@ -363,32 +363,32 @@
 
 
 
-#   
-# Learn Python  Lists- Basics
-#
-friends = ['John','Michael','Terry','Eric','Graham']
-#            0       1           2
-print(friends)
+# #   
+# # Learn Python  Lists- Basics
+# #
+# friends = ['John','Michael','Terry','Eric','Graham']
+# #            0       1           2
+# print(friends)
 
-friends = ['John','Michael','Terry','Eric','Graham']
+# friends = ['John','Michael','Terry','Eric','Graham']
 
-print(friends[1],friends[4])
-print(friends[-1])
+# print(friends[1],friends[4])
+# print(friends[-1])
 
-friends = ['John','Michael','Terry','Eric','Graham']
+# friends = ['John','Michael','Terry','Eric','Graham']
 
-print(friends[1],friends[4])
-print(friends[2:4])
-print(friends[:4])
-print(friends[:])
+# print(friends[1],friends[4])
+# print(friends[2:4])
+# print(friends[:4])
+# print(friends[:])
 
-print(len(friends))
-print(friends.index('Eric'))
-print(friends.count('Eric'))
+# print(len(friends))
+# print(friends.index('Eric'))
+# print(friends.count('Eric'))
 
-print(friends[1],friends[4])
-print(len(friends))
-print(friends.index('Eric'))
+# print(friends[1],friends[4])
+# print(len(friends))
+# print(friends.index('Eric'))
 
 
 
@@ -396,24 +396,244 @@ print(friends.index('Eric'))
 
 #
 # Learn Python Lists- continued
-# 
+# # 
 
-friends = ['John','Michael','Terry','Eric','Graham']
-cars = [911,130,328,535,740,308]
-print(friends)
-friends.sort()
-print(friends)
-friends.sort(reverse=True)
-print(friends)
-friends.reverse()
-print(friends)
+# friends = ['John','Michael','Terry','Eric','Graham']
+# cars = [911,130,328,535,740,308]
+# print(friends)
+# friends.sort()
+# print(friends)
+# friends.sort(reverse=True)
+# print(friends)
+# friends.reverse()
+# print(friends)
 
+
+
+# print('-.......................')
+# friends = ['John','Michael','Terry','Eric','Graham']
+# cars = [911,130,328,535,740,308]
+# print(friends)
+# cars.sort()
+# print(cars)
+# friends.sort(reverse=True)
+# print(friends)
+# friends.reverse()
+# print(friends)
+
+# friends = ['John','Michael','Terry','Eric','Graham']
+# cars = [911,130,328,535,740,308]
+# print(friends)
+# print(sum(cars)) # min  . Max  
+
+
+# friends = ['John','Michael','Terry','Eric','Graham']
+# cars = [911,130,328,535,740,308]
+# #friends.append('TerryG')
+# #friends.insert(1,'TerryG')
+# #friends[2]='TerryG'
+# friends.extend(cars)
+# friends.remove('Terry')
+# friends.pop(-1)
+# #friends.clear()
+# #del friends
+# #del friends[2]
+# print(friends)
+# #new_friends = friends[:]
+# #new_friends = friends.copy()
+# new_friends = list(friends)
+# print(new_friends)
+
+
+
+
+# Learn Python Lists - Exercise
+
+
+# sales_w1 = [7,3,42,19,15,35,9]
+# sales_w2 = [12,4,26,10,7,28]
+# sales = []
+# new_day = input('Enter #of lemonades for new day: ')
+# sales_w2.append(int(new_day))
+# #sales.extend(sales_w1)
+# #sales.extend(sales_w2)
+# sales = sales_w1 + sales_w2
+# #sales.sort()
+# worst_day_prof = min(sales) * 1.5
+# best_day_prof = max(sales) * 1.5
+# print(f'Worst day profit:$ {worst_day_prof}')
+# print(f'Best day profit:$ {best_day_prof}')
+# print(f'Combined profit:$ {worst_day_prof + best_day_prof}')
+
+
+
+
+
+# # Learn Python Split and Join
+
+
+# msg ='Welcome to Python 101: Split and Join'
+# csv = 'Eric,John,Michael,Terry,Graham'
+# friends_list = ['Eric','John','Michael','Terry','Graham']
+# print(msg.split())
+
+
+# msg ='Welcome  to  Python  101: Split  and Join'
+# csv = 'Eric,John,Michael,Terry,Graham'
+# friends_list = ['Eric','John','Michael','Terry','Graham']
+# print(msg.split())
+# print(msg.split(' '))
+# print(msg.split(' '), type(msg.split(' ')))
+# print(csv.split(','))
+# print('-'.join(friends_list))
+# print(''.join(msg.split()))
+
+# # print(msg.replace(' ', ''))
+
+
+
+
+# # Learn Python
+# # Split and Join - Exercise
+
+
+# csv = 'Eric,John,Michael,Terry,Graham:TerryG;Brian'
+
+
+# friends_list = (','.join(','.join(csv.split(';')).split(':'))).split(',')
+# print(friends_list)
+
+
+# print('replace', csv.replace(';',',').replace(':',',').split(','))
+# # From the list above fill a list(friends_list) properly
+# # with the names of all the friends. One per "slot"
+# # you may need to run same command several times
+# # use print() statements to work your way through the exercise
+
+
+
+
+# Learn Python Tuples
+
+#Tuples - faster Lists you can't change
 friends = ['John','Michael','Terry','Eric','Graham']
-cars = [911,130,328,535,740,308]
+friends_tuple = ('John','Michael','Terry','Eric','Graham')
+print(friends[2:4])
+print(friends_tuple[2:4])
+
+
+
+# Learn Python Sets
+
+#Sets - blazingly fast unordered Lists 
+friends = ['John','Michael','Terry','Eric','Graham']
+friends_tuple = ('John','Michael','Terry','Eric','Graham')
+friends_set = {'John','Michael','Terry','Eric','Graham','Eric'}
 print(friends)
-cars.sort()
-print(cars)
-friends.sort(reverse=True)
-print(friends)
-friends.reverse()
-print(friends)
+print(friends_tuple)
+print(friends_set)
+
+
+
+
+#Sets - blazingly fast unordered Lists 
+friends = ['John','Michael','Terry','Eric','Graham']
+friends_tuple = ('John','Michael','Terry','Eric','Graham')
+friends_set = {'John','Michael','Terry','Eric','Graham','Eric'}
+my_friends_set = {'Reg','Loretta','Colin','Eric','Graham'}
+
+print(friends_set.intersection(my_friends_set))
+
+print(friends_set.union(my_friends_set))
+
+print(friends_set.intersection(my_friends_set))
+
+print(friends_set.difference(my_friends_set))
+
+print(friends_set.union(my_friends_set))
+
+
+#Sets - blazingly fast unordered Lists 
+#empty Lists
+empty_list = []
+empyt_list = list()
+
+#empty Tuple
+empty_tuple = ()
+empty_tuple = tuple()
+
+#empty Set
+empty_set = {} # this is wrong, this is a dictionary
+empty_set = set()
+
+
+
+
+
+# Learn Python Sets-Exercises
+friends = {'John','Michael','Terry','Eric','Graham'}
+my_friends = {'Reg','Loretta','Colin','John','Graham'}
+cars =['900','420','V70','911','996','V90','911','911','S','328','900']
+#Sets - Exercise
+
+#1. Check if ‘Eric’ and ‘John’ exist in friends
+
+print('Eric' in friends and 'John' in friends)
+
+
+#2. combine or add the two sets 
+print(friends.union(my_friends))
+print(friends | my_friends)
+
+
+
+
+#3. Find names that are in both sets
+print(friends.intersection(my_friends))
+print(friends & my_friends)
+
+
+
+#4. find names that are only in friends
+print(friends.difference(my_friends))
+print(friends - my_friends)
+
+
+#5. Show only the names who only appear in one of the lists
+print(my_friends.symmetric_difference(friends))
+print(my_friends ^ friends)
+
+
+
+
+
+#6. Create a new cars-list without duplicates
+cars_no_dupl =set(cars)
+print(cars_no_dupl)
+
+
+
+# # Learn Python Comments
+
+# #Entry form for Ministry applications
+# #to-do: fix it! it doesn’t work  
+# name = "Default"
+# name = input(Enter your silly name: )
+# print("Thank you " + name + "!")
+# print("for applying to")
+# print("the Minstry of Silly Walks")
+
+ 
+
+
+
+# Learn Python Functions - Calling ,parameters, arguments, defaults
+
+def greeting(name,age=28):
+    print("Hello " + name + ", you are " + str(age) + "!")
+    print(f"Hello {name}, you are {age}!")
+
+#name = input("Enter your name: ")    
+name = 'Luis'
+greeting(name,32)
+greeting("Judith")
