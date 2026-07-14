@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Uploaded Files</h1>
+    <ul>
+        {% for file in files %}
+            <li>
+                {{ file[0] }} 
+                <!-- If it's an image, show it -->
+                {% if file[0].lower().endswith(('.jpg', '.png', '.jpeg')) %}
+                    <br><img src="{{ url_for('static', filename='uploads/' + file[0]) }}" width="100">
+                {% else %}
+                    <!-- If it's a PDF, show a link -->
+                    <br><a href="{{ url_for('static', filename='uploads/' + file[0]) }}" target="_blank">View PDF</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
